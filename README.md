@@ -97,9 +97,11 @@ surround by `()`. `\2` represents the second one.
 However, for normal regex, backslash before parenthesis should be omitted.
 For more information, refer to [here](http://tex.stackexchange.com/questions/116036/automatically-replace-all-foo-with-absfoo).
 
-## Sort
+## Command sort, grep, awk, sed
 
-Sort lines in a file wher the key is numbers iwth non-numeric prefix, like
+### Sort lines where the key is numbers with non-numberic prefix 
+
+Sort lines in a file where the key is numbers with non-numeric prefix, like
 
 	M UR0 abc
 	M UR2 cda
@@ -107,7 +109,7 @@ Sort lines in a file wher the key is numbers iwth non-numeric prefix, like
 
 just call
 
-	sort -Vk 2 filename
+	sort -Vnk 2 filename
 
 , which outputs
 
@@ -115,9 +117,20 @@ just call
 	M UR1 ged
 	M UR2 cda
 
+### Pick lines beginning with certain string, get their certain delimeters, sort them
+
+	grep '^BQ' count8.log | awk '{print $4 "\t" $5}' | sort -nk 2 > count9.log
+
 ## bash
 
 *	`[ctrl]+u`	deletes command ahead of cursor
 *	`[ctrl]+k`	deletes command behind cursor
 *	`df -H`		finds out hwo much disk space left
 *	`sudo -i`	enters root mode.
+
+## VIM
+
+*	`=`		automatically indent.
+*	`gq`	automatically cut one line into multiple lines containing at most 80 characters. Usage: enter VISUAL mode, select lines that you want to cut, enter `gq`. Or `gqgq` to cut current line.
+*	`:set spell`	spelling check.
+*	`%`		jump to the paired parenthese.
