@@ -7,7 +7,7 @@ to shell from GUI on his Macbook. Actually he is just being cool.
 
 	java -cp saxon9he.jar net.sf.saxon.Query -t -s:samples\data\books.xml -q:samples\query\books-to-html.xq -o:c:\temp.html
 
-If you don't want to type `-cp` every time, yo can copy `.jar` file to `/Library/Java/Extensions` on OS X.
+If you don't want to type `-cp` every time, yo can copy `.jar` file to `/Library/Java/Extensions` on macOS.
 
 ## Output redirection
 
@@ -127,6 +127,10 @@ just call
 *	`[ctrl]+k`	deletes command behind cursor
 *	`df -H`		finds out hwo much disk space left
 *	`sudo -i`	enters root mode.
+*	`cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'`	ssh without password
+*	`async -aP ~ b@B` backup directory ~ to server B, refer to this
+	[website](https://www.haykranen.nl/2008/05/05/rsync/) and this [shell
+script](https://github.com/laurent22/rsync-time-backup) on GitHub.
 
 ## VIM
 
@@ -134,3 +138,13 @@ just call
 *	`gq`	automatically cut one line into multiple lines containing at most 80 characters. Usage: enter VISUAL mode, select lines that you want to cut, enter `gq`. Or `gqgq` to cut current line.
 *	`:set spell`	spelling check.
 *	`%`		jump to the paired parenthese.
+*	`;`		jump to the next matched sequence.
+
+## Latex
+
+*	To make page size fit to the content, use `\documentclass{standalone}`.
+
+## MISC
+
+*	Simple calculators `calc` and `bc`.
+*	get MD5 `md5 <filename>` or `openssl md5 <filename>`
