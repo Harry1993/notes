@@ -1,7 +1,7 @@
 # Unix Notes
 
 This is a document by Yanmao Man, who is learning how to migrate everything
-to shell from GUI on his Macbook. Actually he is just being cool.
+to shell from GUI on his MacBook. Actually he is just being cool.
 
 ## _XQuery_ command line
 
@@ -47,6 +47,10 @@ Examples:
 `zip filename.zip path` zips `path` into `filename.zip`.
 
 `unzip filename.zip` unzips `filename.zip` to current path.
+
+Find and zip: `find ./ -mmin -360 -exec zip filename.zip {} +`
+
+Find and cp: `find ./ -mmin -60 -name '*.eps' -exec cp {} ~/Dropbox/Research/PeB/peb/ \;`
 
 ### tar
 
@@ -128,7 +132,8 @@ just call
 *	`df -H`		finds out hwo much disk space left
 *	`sudo -i`	enters root mode.
 *	`cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'`	ssh without password
-*	`async -aP ~ b@B` backup directory ~ to server B, refer to this
+*	`ssh-keygen -R <host>` when ssh remote host identification has changed.
+*	`async -aP --delete-after ~ b@B` backup directory ~ to server B, refer to this
 	[website](https://www.haykranen.nl/2008/05/05/rsync/) and this [shell
 script](https://github.com/laurent22/rsync-time-backup) on GitHub.
 
@@ -139,12 +144,95 @@ script](https://github.com/laurent22/rsync-time-backup) on GitHub.
 *	`:set spell`	spelling check.
 *	`%`		jump to the paired parenthese.
 *	`;`		jump to the next matched sequence.
+*	When replace string including `&`, no `\` ahead for searching. But `\` is needed for replacing. For example, `s/9 & \\infty/\\intfy \& 9/gc`.
+*	`^M` issue	Try `:%s/\r//g` 
+
+## Tmux
+
+### Unable to use `open` command in Tmux
+
+	brew install reattach-to-user-namespace
+	echo "set -g default-command \"reattach-to-user-namespace -l ${SHELL}\"" >> ~/.tmux.conf
+	tmux kill-server
+
+Explanation can be found [here](http://apple.stackexchange.com/questions/243067/terminal-app-and-tmux-session-cant-use-open-command-without-tmux-it-works?newreg=0952c1c709224fcd992d4ac05e88b9e1).
 
 ## Latex
 
 *	To make page size fit to the content, use `\documentclass{standalone}`.
+*	Use package `setspace` to alter lines spacing. `\linespread` also works but [note](http://www.tex.ac.uk/FAQ-linespread.html).
+*	To compress PDF. Run `gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=small.pdf big.pdf`. See [here](http://tex.stackexchange.com/questions/14429/pdftex-reduce-pdf-size-reduce-image-quality).
+
+## Mutt
+
+IMAP of UNCG address is `y_man@uncg.edu@imap.gmail.com:993`.
+
+SMTP is `smtp://y_man@uncg.edu@smtp.gmail.com:587/`
+
+To save password safely, refer to [this](http://unix.stackexchange.com/questions/20570/mutt-how-to-safely-store-password).
+
+First, Create `~/.mutt/passwords`, where type
+
+	set imap_pass="yourpassword"
+	set smtp_pass="yourpassword"
+
+Then encrypte it using GPG. First genereate GPG pub/sec key-pair
+
+	$ gpg --gen-key
+
+Few more steps are needed during this process.
+
+Encrypte the passwords file:
+
+	$ gpg -r your.email@example.com -e ~/.mutt/passwords
+	$ ls ~/.mutt/passwords*
+	/home/user/.mutt/passwords   /home/user/.mutt/passwords.gpg
+	$ shred ~/.mutt/passwords
+	$ rm ~/.mutt/passwords
+
+Add it to your `.muttrc`
+
+	source "gpg -d ~/.mutt/passwords.gpg |"
+
+## Ubuntu
+
+### To enter Gnome
+
+run `startx`.
+
+### To startup with command line
+
+edit `/etc/default/grub`, change `GRUB_CMDLINE_LINUX_DEFAULT=”quiet
+splash”`, to `GRUB_CMDLINE_LINUX_DEFAULT=”text”`. Finally `update-grub`.
+
+### Gnome xauthority issues
+
+When terminal says `timeout in locking authority file
+/home/username/.Xauthority`, try to
+
+	cd /home/username
+	mv .Xauthority .Xauthority.old
+	touch .Xauthority
+	chown username:username .Xauthority 
+
+### Keyboard shortcut changing
+
+Use compizconfig-settings-manager. See [this](http://www.linuxdiyf.com/linux/22726.html).
+
+### Key binding
+
+Use xmodmap. See [this](http://www.cnblogs.com/lzhskywalker/archive/2012/07/20/2600854.html).
 
 ## MISC
 
 *	Simple calculators `calc` and `bc`.
 *	get MD5 `md5 <filename>` or `openssl md5 <filename>`
+*	switch Ctrl and Caps Lock: `setxkbmap -layout us -option ctrl:nocaps`
+*	to use bash command history, refer to [this](http://www.howtogeek.com/howto/44997/how-to-use-bash-history-to-improve-your-command-line-productivity/).
+*	Listen Pandora, use `pianobar`. Refer to [this](https://linuxcritic.wordpress.com/2013/09/08/pianobar-command-line-pandora-client-howto/). Type your password in `~/.config/pianobar/password` and `gpg` it.
+*	Before use xfig, run `source /sw/bin/init.sh`.
+*	VPN over SSH: `sshuttle -r username@sshserver 0/0`.
+
+## MATLAB
+
+`unique` to make values unique.
