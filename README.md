@@ -129,7 +129,8 @@ just call
 
 *	`[ctrl]+u`	deletes command ahead of cursor
 *	`[ctrl]+k`	deletes command behind cursor
-*	`df -H`		finds out hwo much disk space left
+*	`df -H`		finds out how much disk space left
+*	`du -sh`	finds out how big current dir is.
 *	`sudo -i`	enters root mode.
 *	`cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'`	ssh without password
 *	`ssh-keygen -R <host>` when ssh remote host identification has changed.
@@ -162,6 +163,8 @@ Explanation can be found [here](http://apple.stackexchange.com/questions/243067/
 *	To make page size fit to the content, use `\documentclass{standalone}`.
 *	Use package `setspace` to alter lines spacing. `\linespread` also works but [note](http://www.tex.ac.uk/FAQ-linespread.html).
 *	To compress PDF. Run `gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=small.pdf big.pdf`. See [here](http://tex.stackexchange.com/questions/14429/pdftex-reduce-pdf-size-reduce-image-quality).
+*	Use package `etoolbox` to automately add command in any enviornment. See [here](http://mirror.hmc.edu/ctan/macros/latex/contrib/etoolbox/etoolbox.pdf)
+*	`vspace{}` sets spacing.
 
 ## Mutt
 
@@ -223,6 +226,15 @@ Use compizconfig-settings-manager. See [this](http://www.linuxdiyf.com/linux/227
 
 Use xmodmap. See [this](http://www.cnblogs.com/lzhskywalker/archive/2012/07/20/2600854.html).
 
+### Sound card on Ubuntu
+
+If USB sound card is too loud or mutes at low volume, edit
+`/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common`, add line
+`volume-limit = 0.005` under `[Element PCM]`. If volume is too low, increase
+the number. Run `pulseaudio -k` to make it into effect. See
+[this](https://chrisjean.com/fix-for-usb-audio-is-too-loud-and-mutes-at-low-volume-in-ubuntu/).
+
+
 ## MISC
 
 *	Simple calculators `calc` and `bc`.
@@ -232,6 +244,15 @@ Use xmodmap. See [this](http://www.cnblogs.com/lzhskywalker/archive/2012/07/20/2
 *	Listen Pandora, use `pianobar`. Refer to [this](https://linuxcritic.wordpress.com/2013/09/08/pianobar-command-line-pandora-client-howto/). Type your password in `~/.config/pianobar/password` and `gpg` it.
 *	Before use xfig, run `source /sw/bin/init.sh`.
 *	VPN over SSH: `sshuttle -r username@sshserver 0/0`.
+*	Use `nload` to monitor network.
+*	Burn ISO file to a flash drive or disk, use `dd`. See [this](http://osxdaily.com/2012/03/13/burn-an-iso-image-from-the-command-line/).
+
+## OpenVPN on Ubuntu
+
+*	Setup an OpenVPN server, use this script `wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh`.
+If VPN is connected without Internet access, run `sudo ip route add default via xxx.xxx.xxx.xxx`. See [this](https://askubuntu.com/questions/667544/vpn-client-routing-when-use-this-connection-only-for-resources-on-its-network).
+
+*	Connect to an OpenVPN server, check [this](https://www.linux.com/learn/configure-linux-clients-connect-openvpn-server) out.
 
 ## MATLAB
 
