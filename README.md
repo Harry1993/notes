@@ -246,6 +246,7 @@ the number. Run `pulseaudio -k` to make it into effect. See
 *	VPN over SSH: `sshuttle -r username@sshserver 0/0`.
 *	Use `nload` to monitor network.
 *	Burn ISO file to a flash drive or disk, use `dd`. See [this](http://osxdaily.com/2012/03/13/burn-an-iso-image-from-the-command-line/).
+*	Before `git push`, run `git add .` and then `git commit -m "blabla"`.
 
 ## OpenVPN on Ubuntu
 
