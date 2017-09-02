@@ -147,6 +147,7 @@ script](https://github.com/laurent22/rsync-time-backup) on GitHub.
 *	`;`		jump to the next matched sequence.
 *	When replace string including `&`, no `\` ahead for searching. But `\` is needed for replacing. For example, `s/9 & \\infty/\\intfy \& 9/gc`.
 *	`^M` issue	Try `:%s/\r//g` 
+*	Follow [this](https://github.com/Valloric/YouCompleteMe) to install YouCompleteMe. Then add `set runtimepath+=~/.vim/bundle/YouCompleteMe` in `.vimrc`.
 
 ## Tmux
 
