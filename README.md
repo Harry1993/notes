@@ -235,6 +235,8 @@ If USB sound card is too loud or mutes at low volume, edit
 the number. Run `pulseaudio -k` to make it into effect. See
 [this](https://chrisjean.com/fix-for-usb-audio-is-too-loud-and-mutes-at-low-volume-in-ubuntu/).
 
+Or try `alsamixer`. :)
+
 
 ## MISC
 
