@@ -200,6 +200,10 @@ Add it to your `.muttrc`
 
 ## Ubuntu
 
+### To edit image
+
+use `pinta`.
+
 ### To enter Gnome
 
 run `startx`.
