@@ -241,6 +241,16 @@ the number. Run `pulseaudio -k` to make it into effect. See
 
 Or try `alsamixer`. :)
 
+Change `~/.asoundrc` to
+	pcm.!default {
+        type hw
+        card 0
+	}
+
+	ctl.!default {
+        type hw
+        card 0
+	}
 
 ## MISC
 
