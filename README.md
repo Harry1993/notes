@@ -241,15 +241,17 @@ the number. Run `pulseaudio -k` to make it into effect. See
 
 Or try `alsamixer`. :)
 
-Change `~/.asoundrc` to
+If use another sound card, use `aplay -l` to get the device number, then change
+`~/.asoundrc` to
+
 	pcm.!default {
         type hw
-        card 0
+        card 1
 	}
 
 	ctl.!default {
         type hw
-        card 0
+        card 1
 	}
 
 ## MISC
@@ -263,7 +265,16 @@ Change `~/.asoundrc` to
 *	VPN over SSH: `sshuttle -r username@sshserver 0/0`.
 *	Use `nload` to monitor network.
 *	Burn ISO file to a flash drive or disk, use `dd`. See [this](http://osxdaily.com/2012/03/13/burn-an-iso-image-from-the-command-line/).
-*	Before `git push`, run `git add .` and then `git commit -m "blabla"`.
+*	Before `git push`, run `git add .` and then `git commit -m "blahblah"`.
+*	Use `sshfs` to mount a sftp drive. E.g., `sshfs username@hostname:/remote/directory/path /local/mount/point`. On Mac OS, we need to install `osxfuse` first.
+
+## Email me when someone ssh in.
+Edit `/etc/ssh/sshrc`, add the following:
+
+	ip=`echo $SSH_CONNECTION | cut -d " " -f 1`
+	logger -t ssh-wrapper $USER login from $ip
+	echo "User $USER just logged in from $ip" | mail -s "ssh alert" yourname@emailserver
+
 
 ## OpenVPN on Ubuntu
 
