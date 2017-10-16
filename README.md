@@ -159,6 +159,10 @@ script](https://github.com/laurent22/rsync-time-backup) on GitHub.
 
 Explanation can be found [here](http://apple.stackexchange.com/questions/243067/terminal-app-and-tmux-session-cant-use-open-command-without-tmux-it-works?newreg=0952c1c709224fcd992d4ac05e88b9e1).
 
+### `bind-key` issue
+
+The new way should be `bind-key -T copy-mode-vi v send-keys -X begin-selection`. See [this](https://github.com/tmux/tmux/issues/754).
+
 ## Latex
 
 *	To make page size fit to the content, use `\documentclass{standalone}`.
@@ -267,6 +271,7 @@ If use another sound card, use `aplay -l` to get the device number, then change
 *	Burn ISO file to a flash drive or disk, use `dd`. See [this](http://osxdaily.com/2012/03/13/burn-an-iso-image-from-the-command-line/).
 *	Before `git push`, run `git add .` and then `git commit -m "blahblah"`.
 *	Use `sshfs` to mount a sftp drive. E.g., `sshfs username@hostname:/remote/directory/path /local/mount/point`. On Mac OS, we need to install `osxfuse` first.
+*	To delete Plex Server completely, follow [this](https://forums.plex.tv/discussion/31215).
 
 ## Email me when someone ssh in.
 Edit `/etc/ssh/sshrc`, add the following:
