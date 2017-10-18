@@ -148,6 +148,7 @@ script](https://github.com/laurent22/rsync-time-backup) on GitHub.
 *	When replace string including `&`, no `\` ahead for searching. But `\` is needed for replacing. For example, `s/9 & \\infty/\\intfy \& 9/gc`.
 *	`^M` issue	Try `:%s/\r//g` 
 *	Follow [this](https://github.com/Valloric/YouCompleteMe) to install YouCompleteMe. Then add `set runtimepath+=~/.vim/bundle/YouCompleteMe` in `.vimrc`.
+*	To edit in hex mode, use `%!xxd`. Before saving, use `%!xxd -r`. Or see [this](http://vim.wikia.com/wiki/Improved_hex_editing).
 
 ## Tmux
 
@@ -291,3 +292,15 @@ If VPN is connected without Internet access, run `sudo ip route add default via 
 ## MATLAB
 
 `unique` to make values unique.
+
+## SSH to a VM in virtualbox
+
+Accoring to
+[this](https://stackoverflow.com/questions/5906441/how-to-ssh-to-a-virtualbox-guest-externally-through-a-host),
+Run the following command to add a rule to vboxmanager:
+
+	VBoxManage modifyvm myserver --natpf1 "ssh,tcp,,3022,,22"
+
+where myserver should be the name of the VM. Then you can SSH by
+
+	ssh -p 3022 user@localhost
