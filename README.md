@@ -132,7 +132,8 @@ just call
 *	`df -H`		finds out how much disk space left
 *	`du -sh`	finds out how big current dir is.
 *	`sudo -i`	enters root mode.
-*	`cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'`	ssh without password
+*	`cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'` to ssh
+	without password. Or `ssh-copy-id -i ~/.ssh/id_rsa.pub b@B`
 *	`ssh-keygen -R <host>` when ssh remote host identification has changed.
 *	`async -aP --delete-after ~ b@B` backup directory ~ to server B, refer to this
 	[website](https://www.haykranen.nl/2008/05/05/rsync/) and this [shell
@@ -271,7 +272,12 @@ If use another sound card, use `aplay -l` to get the device number, then change
 *	Use `nload` to monitor network.
 *	Burn ISO file to a flash drive or disk, use `dd`. See [this](http://osxdaily.com/2012/03/13/burn-an-iso-image-from-the-command-line/).
 *	Before `git push`, run `git add .` and then `git commit -m "blahblah"`.
-*	Use `sshfs` to mount a sftp drive. E.g., `sshfs username@hostname:/remote/directory/path /local/mount/point`. On Mac OS, we need to install `osxfuse` first.
+*	Use `sshfs` to mount a sftp drive. E.g., `sshfs -o allow_other -o ro
+	username@hostname:/remote/directory/path /local/mount/point`, where `-o
+allow_other` option grants other user (e.g., plex) and `-o ro` means read only.
+On Mac OS, we need to install `osxfuse` first. See
+[this](https://forums.plex.tv/discussion/103322/running-plex-from-vps-accessing-media-from-mounted-sftp-headache)
+discussion.
 *	To delete Plex Server completely, follow [this](https://forums.plex.tv/discussion/31215).
 
 ## Email me when someone ssh in.
