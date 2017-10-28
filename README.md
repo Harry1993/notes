@@ -279,6 +279,8 @@ On Mac OS, we need to install `osxfuse` first. See
 [this](https://forums.plex.tv/discussion/103322/running-plex-from-vps-accessing-media-from-mounted-sftp-headache)
 discussion.
 *	To delete Plex Server completely, follow [this](https://forums.plex.tv/discussion/31215).
+*	To schdule a task, use `cron`. See [this](https://en.wikipedia.org/wiki/Cron).
+*	To check a dir is mount point or not, use `mountpoint`. See [this](https://unix.stackexchange.com/questions/38870/how-to-check-if-a-filesystem-is-mounted-with-a-script).
 
 ## Email me when someone ssh in.
 Edit `/etc/ssh/sshrc`, add the following:
