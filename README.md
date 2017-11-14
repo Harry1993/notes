@@ -60,6 +60,10 @@ Find and cp: `find ./ -mmin -60 -name '*.eps' -exec cp {} ~/Dropbox/Research/PeB
 
 `tar -jtv -f filename.tar.bz2` views contents of `filename.tar.bz2`.
 
+### 7z
+
+To extract, run `7za x filename.7z`. Some files have name of `filename.tar.7z`. That means we should first extract with `7za` and then `tar`.
+
 ## grep
 
 `grep 'C' reg.log > cc.txt` finds all lines contains 'C'.
@@ -281,6 +285,7 @@ discussion.
 *	To delete Plex Server completely, follow [this](https://forums.plex.tv/discussion/31215).
 *	To schdule a task, use `cron`. See [this](https://en.wikipedia.org/wiki/Cron).
 *	To check a dir is mount point or not, use `mountpoint`. See [this](https://unix.stackexchange.com/questions/38870/how-to-check-if-a-filesystem-is-mounted-with-a-script).
+*	To monitor a file being changed, use `watch -n 1 stat -c "%y" thefile`.
 
 ## Email me when someone ssh in.
 Edit `/etc/ssh/sshrc`, add the following:
