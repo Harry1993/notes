@@ -198,7 +198,7 @@ Few more steps are needed during this process.
 
 Encrypte the passwords file:
 
-	$ gpg -r your.email@example.com -e ~/.mutt/passwords
+	$ gpg -r your.email@example.com -e ~/.mutt/passwords # or gpg -s --default-key DEADBEE5 input to specify key, before which, run gpg --list-secret-keys
 	$ ls ~/.mutt/passwords*
 	/home/user/.mutt/passwords   /home/user/.mutt/passwords.gpg
 	$ shred ~/.mutt/passwords
@@ -286,6 +286,7 @@ discussion.
 *	To schdule a task, use `cron`. See [this](https://en.wikipedia.org/wiki/Cron).
 *	To check a dir is mount point or not, use `mountpoint`. See [this](https://unix.stackexchange.com/questions/38870/how-to-check-if-a-filesystem-is-mounted-with-a-script).
 *	To monitor a file being changed, use `watch -n 1 stat -c "%y" thefile`.
+*	To create a symbolic link (shortcut), run `ln -s source target`.
 
 ## Email me when someone ssh in.
 Edit `/etc/ssh/sshrc`, add the following:
