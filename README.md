@@ -287,6 +287,14 @@ discussion.
 *	To check a dir is mount point or not, use `mountpoint`. See [this](https://unix.stackexchange.com/questions/38870/how-to-check-if-a-filesystem-is-mounted-with-a-script).
 *	To monitor a file being changed, use `watch -n 1 stat -c "%y" thefile`.
 *	To create a symbolic link (shortcut), run `ln -s source target`.
+*	To mimic pbcopy and pbpaste, add these aliases
+
+	alias pbcopy='xclip -selection clipboard'
+	alias pbpaste='xclip -selection clipboard -o'
+
+*	[Best terminal translator](https://github.com/soimort/translate-shell).
+*	To convert EPS to PDF, run `ps2pdf -dEPSCrop input.eps output.pdf`. See [this](http://www.leancrew.com/all-this/2012/03/maintaining-the-boundingbox-in-ps2pdf/).
+*	To convert GBK to UTF-8, run `iconv -f GBK -t UTF-8 input.txt > output.txt`.
 
 ## Email me when someone ssh in.
 Edit `/etc/ssh/sshrc`, add the following:
