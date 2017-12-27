@@ -281,7 +281,7 @@ If use another sound card, use `aplay -l` to get the device number, then change
 allow_other` option grants other user (e.g., plex) and `-o ro` means read only.
 On Mac OS, we need to install `osxfuse` first. See
 [this](https://forums.plex.tv/discussion/103322/running-plex-from-vps-accessing-media-from-mounted-sftp-headache)
-discussion.
+discussion. To unmount, run `fusermount -uz ./mountpoint`.
 *	To delete Plex Server completely, follow [this](https://forums.plex.tv/discussion/31215).
 *	To schdule a task, use `cron`. See [this](https://en.wikipedia.org/wiki/Cron).
 *	To check a dir is mount point or not, use `mountpoint`. See [this](https://unix.stackexchange.com/questions/38870/how-to-check-if-a-filesystem-is-mounted-with-a-script).
