@@ -60,6 +60,8 @@ Find and cp: `find ./ -mmin -60 -name '*.eps' -exec cp {} ~/Dropbox/Research/PeB
 
 `tar -jtv -f filename.tar.bz2` views contents of `filename.tar.bz2`.
 
+`tar -xvz -f file.tar.gz` to decompress a tar.gz file.
+
 ### 7z
 
 To extract, run `7za x filename.7z`. Some files have name of `filename.tar.7z`. That means we should first extract with `7za` and then `tar`.
@@ -281,7 +283,7 @@ If use another sound card, use `aplay -l` to get the device number, then change
 allow_other` option grants other user (e.g., plex) and `-o ro` means read only.
 On Mac OS, we need to install `osxfuse` first. See
 [this](https://forums.plex.tv/discussion/103322/running-plex-from-vps-accessing-media-from-mounted-sftp-headache)
-discussion. To unmount, run `fusermount -uz ./mountpoint`. If forget to unmount before go to sleep, run `sudo diskutil umount force [mountpoint]` (See [this discussion](https://github.com/osxfuse/osxfuse/issues/45)).
+discussion. To unmount, run `fusermount -uz ./mountpoint`. If forget to unmount before go to sleep, `kill -9 [pid_of_sshfs_process]` first, then unmount. (See [this discussion](https://github.com/osxfuse/osxfuse/issues/45)).
 *	To delete Plex Server completely, follow [this](https://forums.plex.tv/discussion/31215).
 *	To schdule a task, use `cron`. See [this](https://en.wikipedia.org/wiki/Cron).
 *	To check a dir is mount point or not, use `mountpoint`. See [this](https://unix.stackexchange.com/questions/38870/how-to-check-if-a-filesystem-is-mounted-with-a-script).
