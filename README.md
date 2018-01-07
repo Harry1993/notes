@@ -210,6 +210,10 @@ Add it to your `.muttrc`
 
 	source "gpg -d ~/.mutt/passwords.gpg |"
 
+## MacOS
+
+*	To install Zathura, follow [this](https://github.com/zegervdv/homebrew-zathura). Remember to link the plugins into place.
+
 ## Ubuntu
 
 ### To edit image
