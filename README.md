@@ -290,6 +290,7 @@ discussion. To unmount, run `fusermount -uz ./mountpoint`. If forget to unmount 
 *	To monitor a file being changed, use `watch -n 1 stat -c "%y" thefile`.
 *	To create a symbolic link (shortcut), run `ln -s source target`.
 *	To mimic pbcopy and pbpaste, add these aliases
+*	To find the PID by process name, run `pgrep -lf <process_name>'.
 
 	alias pbcopy='xclip -selection clipboard'
 	alias pbpaste='xclip -selection clipboard -o'
