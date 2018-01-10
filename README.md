@@ -145,6 +145,21 @@ just call
 	[website](https://www.haykranen.nl/2008/05/05/rsync/) and this [shell
 script](https://github.com/laurent22/rsync-time-backup) on GitHub.
 
+### If UP arrow for searching command history in zsh enviornment.
+
+According to [this](https://github.com/robbyrussell/oh-my-zsh/issues/1720), we shoud add the following to `.zshrc`:
+
+	if [[ "${terminfo[kcuu1]}" != "" ]]; then
+		autoload -U up-line-or-beginning-search
+		zle -N up-line-or-beginning-search
+		bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+	fi
+	if [[ "${terminfo[kcud1]}" != "" ]]; then
+		autoload -U down-line-or-beginning-search
+		zle -N down-line-or-beginning-search
+		bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+
+
 ## VIM
 
 *	`=`		automatically indent.
