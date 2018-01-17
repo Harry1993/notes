@@ -158,7 +158,7 @@ According to [this](https://github.com/robbyrussell/oh-my-zsh/issues/1720), we s
 		autoload -U down-line-or-beginning-search
 		zle -N down-line-or-beginning-search
 		bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
-
+	fi
 
 ## VIM
 
@@ -318,7 +318,10 @@ discussion. To unmount, run `fusermount -uz ./mountpoint`. If forget to unmount 
 *	To convert EPS to PDF, run `ps2pdf -dEPSCrop input.eps output.pdf`. See [this](http://www.leancrew.com/all-this/2012/03/maintaining-the-boundingbox-in-ps2pdf/).
 *	To convert GBK to UTF-8, run `iconv -f GBK -t UTF-8 input.txt > output.txt`.
 *	To switch audio device on MacOS, use [switchaudio-osx](https://github.com/deweller/switchaudio-osx).
-*	Extract magnet link from a torrent file, use `magnet-link` following [this](https://github.com/ungoldman/magnet-link).
+*	To extract magnet link from a torrent file, use `magnet-link` following [this](https://github.com/ungoldman/magnet-link).
+*	To rename multiple files, use `rename`. E.g.,
+	rename -n 's/.*(S01E.*)\ (.*)\ 720p.*/better.call.saul.$1.$2.srt/' ./*
+Remove `-n` to actually do it.
 
 ## Email me when someone ssh in.
 Edit `/etc/ssh/sshrc`, add the following:
