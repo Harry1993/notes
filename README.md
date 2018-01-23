@@ -186,6 +186,10 @@ Explanation can be found [here](http://apple.stackexchange.com/questions/243067/
 
 The new way should be `bind-key -T copy-mode-vi v send-keys -X begin-selection`. See [this](https://github.com/tmux/tmux/issues/754).
 
+### Sync tmux panes
+
+	:setw synchronize-panes [on/off]
+
 ## Latex
 
 *	To make page size fit to the content, use `\documentclass{standalone}`.
@@ -320,6 +324,7 @@ discussion. To unmount, run `fusermount -uz ./mountpoint`. If forget to unmount 
 *	To switch audio device on MacOS, use [switchaudio-osx](https://github.com/deweller/switchaudio-osx).
 *	To extract magnet link from a torrent file, use `magnet-link` following [this](https://github.com/ungoldman/magnet-link).
 *	To rename multiple files, use `rename`. E.g., `rename -n 's/.*(S01E.*)\ (.*)\ 720p.*/better.call.saul.$1.$2.srt/' ./*` to rehearse it. Remove `-n` to actually do it.
+*	To Convert `.dff` to `.flac`, use `dfs2flac`. See [this](https://github.com/hank/dsf2flac). Since it doesn't support `*`, use bash for loop parallely: `for filename in ./*; do dsf2flac -i $filename &; done`
 
 ## Email me when someone ssh in.
 Edit `/etc/ssh/sshrc`, add the following:
