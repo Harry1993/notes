@@ -190,6 +190,12 @@ The new way should be `bind-key -T copy-mode-vi v send-keys -X begin-selection`.
 
 	:setw synchronize-panes [on/off]
 
+### Split into the current directory
+
+	bind-key c new-window -c "#{pane_current_path}"
+	bind-key | split-window -h -c "#{pane_current_path}"
+	bind-key - split-window -v -c "#{pane_current_path}"	
+
 ## Latex
 
 *	To make page size fit to the content, use `\documentclass{standalone}`.
