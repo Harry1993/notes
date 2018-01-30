@@ -35,9 +35,3 @@ subnode is `softmax/logits:0`, which is plugged in the following lines of code
                            {'DecodeJpeg/contents:0': image_data})
     print('logits: max:', logits.max(), 'min:', logits.min())
 ```
-
-## String
-
-*	
-
-## Misc
