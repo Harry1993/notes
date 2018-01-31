@@ -144,6 +144,7 @@ just call
 *	`async -aP --delete-after ~ b@B` backup directory ~ to server B, refer to this
 	[website](https://www.haykranen.nl/2008/05/05/rsync/) and this [shell
 script](https://github.com/laurent22/rsync-time-backup) on GitHub.
+*	`unset [GLOBAL_VARIABLE_NAME]` to delete global variable.
 
 ### If UP arrow for searching command history in zsh enviornment.
 
