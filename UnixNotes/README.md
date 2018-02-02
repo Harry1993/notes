@@ -197,6 +197,10 @@ The new way should be `bind-key -T copy-mode-vi v send-keys -X begin-selection`.
 	bind-key | split-window -h -c "#{pane_current_path}"
 	bind-key - split-window -v -c "#{pane_current_path}"	
 
+### nested tmux
+
+See [this](http://stahlke.org/dan/tmux-nested/).
+
 ## Latex
 
 *	To make page size fit to the content, use `\documentclass{standalone}`.
