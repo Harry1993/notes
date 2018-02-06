@@ -209,6 +209,7 @@ See [this](http://stahlke.org/dan/tmux-nested/).
 *	To compress PDF. Run `gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=small.pdf big.pdf`. See [here](http://tex.stackexchange.com/questions/14429/pdftex-reduce-pdf-size-reduce-image-quality).
 *	Use package `etoolbox` to automately add command in any enviornment. See [here](http://mirror.hmc.edu/ctan/macros/latex/contrib/etoolbox/etoolbox.pdf)
 *	`vspace{}` sets spacing.
+*	[latexmk](http://mg.readthedocs.io/latexmk.html) is nice tool to automake tex files. It also support instant update (Killer Feature).
 
 ## Mutt
 
