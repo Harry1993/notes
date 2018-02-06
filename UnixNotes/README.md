@@ -172,6 +172,7 @@ According to [this](https://github.com/robbyrussell/oh-my-zsh/issues/1720), we s
 *	`^M` issue	Try `:%s/\r//g` 
 *	Follow [this](https://github.com/Valloric/YouCompleteMe) to install YouCompleteMe. Then add `set runtimepath+=~/.vim/bundle/YouCompleteMe` in `.vimrc`.
 *	To edit in hex mode, use `%!xxd`. Before saving, use `%!xxd -r`. Or see [this](http://vim.wikia.com/wiki/Improved_hex_editing).
+*	To preview PDF instantly when editing `.tex`, use [vim-latex-live-preview](https://github.com/xuhdev/vim-latex-live-preview)
 
 ## Tmux
 
