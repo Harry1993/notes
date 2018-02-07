@@ -328,16 +328,35 @@ discussion. To unmount, run `fusermount -uz ./mountpoint`. If forget to unmount 
 *	To mimic pbcopy and pbpaste, add these aliases
 *	To find the PID by process name, run `pgrep -lf <process_name>'.
 
-	alias pbcopy='xclip -selection clipboard'
-	alias pbpaste='xclip -selection clipboard -o'
+```
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+```
 
 *	[Best terminal translator](https://github.com/soimort/translate-shell).
 *	To convert EPS to PDF, run `ps2pdf -dEPSCrop input.eps output.pdf`. See [this](http://www.leancrew.com/all-this/2012/03/maintaining-the-boundingbox-in-ps2pdf/).
 *	To convert GBK to UTF-8, run `iconv -f GBK -t UTF-8 input.txt > output.txt`.
 *	To switch audio device on MacOS, use [switchaudio-osx](https://github.com/deweller/switchaudio-osx).
 *	To extract magnet link from a torrent file, use `magnet-link` following [this](https://github.com/ungoldman/magnet-link).
-*	To rename multiple files, use `rename`. E.g., `rename -n 's/.*(S01E.*)\ (.*)\ 720p.*/better.call.saul.$1.$2.srt/' ./*` to rehearse it. Remove `-n` to actually do it.
-*	To Convert `.dff` to `.flac`, use `dfs2flac`. See [this](https://github.com/hank/dsf2flac). Since it doesn't support `*`, use bash for loop parallely: `for filename in ./*; do dsf2flac -i $filename &; done`
+*	To rename multiple files, use `rename`. E.g.,
+
+```
+rename -n 's/.*(S01E.*)\ (.*)\ 720p.*/better.call.saul.$1.$2.srt/' ./*
+```
+
+to rehearse it. Remove `-n` to actually do it.
+*	To Convert `.dff` to `.flac`, use `dfs2flac`. See [this](https://github.com/hank/dsf2flac). Use bash for loop parallely:
+
+```
+for filename in ./*;
+	do dsf2flac -i $filename &;
+done
+```
+
+## Useless but cool
+
+*	Use `fbi` to view image in real terminal.
+*	Use `fbgs` to view PDF in real terminal.
 
 ## Email me when someone ssh in.
 Edit `/etc/ssh/sshrc`, add the following:
