@@ -42,4 +42,12 @@ is equivalent to
 [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
 ```
 
+## Matplotlib
+
+Before print the figure to PDF, make all words and plots fit:
+
+```
+plt.tight_layout(pad=0, h_pad=0, w_pad=0)
+```
+
 ## Misc
