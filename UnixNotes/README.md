@@ -210,6 +210,7 @@ See [this](http://stahlke.org/dan/tmux-nested/).
 *	Use package `etoolbox` to automately add command in any enviornment. See [here](http://mirror.hmc.edu/ctan/macros/latex/contrib/etoolbox/etoolbox.pdf)
 *	`vspace{}` sets spacing.
 *	[latexmk](http://mg.readthedocs.io/latexmk.html) is nice tool to automake tex files. It also support instant update (Killer Feature).
+*	Use `grffile` package to include EPS or PDF as figure.
 
 ## Mutt
 
