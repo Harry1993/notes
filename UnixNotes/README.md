@@ -329,6 +329,7 @@ discussion. To unmount, run `fusermount -uz ./mountpoint`. If forget to unmount 
 *	To create a symbolic link (shortcut), run `ln -s source target`.
 *	To mimic pbcopy and pbpaste, add these aliases
 *	To find the PID by process name, run `pgrep -lf <process_name>'.
+*	Use `lp -d [printer.name] -o sides=two-sided-long-edge [pdf.path]` to print PDF files.
 
 ```
 alias pbcopy='xclip -selection clipboard'
