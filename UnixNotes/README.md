@@ -174,6 +174,31 @@ According to [this](https://github.com/robbyrussell/oh-my-zsh/issues/1720), we s
 *	To edit in hex mode, use `%!xxd`. Before saving, use `%!xxd -r`. Or see [this](http://vim.wikia.com/wiki/Improved_hex_editing).
 *	To preview PDF instantly when editing `.tex`, use [vim-latex-live-preview](https://github.com/xuhdev/vim-latex-live-preview)
 
+### Map hotkeys to do what you want
+
+First, define a function to do something. Take C programming and Latexing for
+an example,
+
+```
+func C()
+	exec "w | !gcc % && ./a.out"
+endfunc
+
+func Latex()
+	exec "w | !latexmk -pdf % && latexmk -c"
+endfunc
+```
+
+Now, map the same hotkey to the two functions
+
+```
+autocmd FileType c map <C-e> :call C()<CR>
+autocmd FileType tex map <C-e> :call Latex()<CR><CR>
+```
+
+Here, `autocmd FileType [type]` allows vim to detect the type of the file and
+choose which function to call.
+
 ## Tmux
 
 ### Unable to use `open` command in Tmux
