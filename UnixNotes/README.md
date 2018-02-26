@@ -78,6 +78,8 @@ To extract, run `7za x filename.7z`. Some files have name of `filename.tar.7z`. 
 
 `grep 'R\t' reg.log | grep '0$' > rr.txt` finds lines contains 'R\t' AND _ends with_ 0.
 
+`grep --include=\*.{c,h} --exclude=*.o --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/somewhere/' -e "pattern"` searches pattern in all files under given dir.
+
 ## Tex
 
 Put `.sty` into `/usr/local/texlive/2010basic/texmf-dist/tex/latex/base/`, then run `texhash`.
