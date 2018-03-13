@@ -418,3 +418,11 @@ Run the following command to add a rule to vboxmanager:
 where myserver should be the name of the VM. Then you can SSH by
 
 	ssh -p 3022 user@localhost
+
+## Networking
+
+### DNS
+
+Check `/etc/resolv.conf`. They are the DNS servers. It'd better have `8.8.8.8`.
+If not, edit `/etc/resolvconf/resolv.conf.d/head`, add `nameserver 8.8.8.8`.
+Run `sudo resolvconf -u` to apply the changes. You may wanna reboot.
