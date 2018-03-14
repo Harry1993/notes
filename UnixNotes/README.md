@@ -355,7 +355,7 @@ discussion. To unmount, run `fusermount -uz ./mountpoint`. If forget to unmount 
 *	To monitor a file being changed, use `watch -n 1 stat -c "%y" thefile`.
 *	To create a symbolic link (shortcut), run `ln -s source target`.
 *	To mimic pbcopy and pbpaste, add these aliases
-*	To find the PID by process name, run `pgrep -lf <process_name>'.
+*	To find the PID by process name, run `pgrep -lf <process_name>'. Its co-worker `pkill` can kill the processes given the name.
 *	Use `lp -d [printer.name] -o sides=two-sided-long-edge [pdf.path]` to print PDF files.
 
 ```
@@ -394,6 +394,10 @@ Edit `/etc/ssh/sshrc`, add the following:
 	ip=`echo $SSH_CONNECTION | cut -d " " -f 1`
 	logger -t ssh-wrapper $USER login from $ip
 	echo "User $USER just logged in from $ip" | mail -s "ssh alert" yourname@emailserver
+
+## Kick out the ssh-ers.
+
+Run `who -u` to see who there are. And kill their tty's by `kill -9 [pid]`. See [this thread](https://unix.stackexchange.com/questions/615/how-do-you-kick-a-benign-user-off-your-system).
 
 
 ## OpenVPN on Ubuntu
