@@ -426,3 +426,7 @@ where myserver should be the name of the VM. Then you can SSH by
 Check `/etc/resolv.conf`. They are the DNS servers. It'd better have `8.8.8.8`.
 If not, edit `/etc/resolvconf/resolv.conf.d/head`, add `nameserver 8.8.8.8`.
 Run `sudo resolvconf -u` to apply the changes. You may wanna reboot.
+
+### nmap
+
+*	`sudo nmap -sS -p 22 192.168.10.0/24` scan the local network for SSH-able hosts.
