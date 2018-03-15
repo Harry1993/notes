@@ -350,7 +350,9 @@ On Mac OS, we need to install `osxfuse` first. See
 [this](https://forums.plex.tv/discussion/103322/running-plex-from-vps-accessing-media-from-mounted-sftp-headache)
 discussion. To unmount, run `fusermount -uz ./mountpoint`. If forget to unmount before go to sleep, `kill -9 [pid_of_sshfs_process]` first, then `umount -f [mountpoint] `. See [this discussion](https://github.com/osxfuse/osxfuse/issues/45).
 *	To delete Plex Server completely, follow [this](https://forums.plex.tv/discussion/31215).
-*	To schdule a task, use `cron`. See [this](https://en.wikipedia.org/wiki/Cron).
+*	To schdule a task regularly, use `cron`. See [this](https://en.wikipedia.org/wiki/Cron).
+*	To schdule a one time task, use `at`. See [this](https://tecadmin.net/one-time-task-scheduling-using-at-commad-in-linux/).
+*	Google calendar in command line, `gcalcli`.
 *	To check a dir is mount point or not, use `mountpoint`. See [this](https://unix.stackexchange.com/questions/38870/how-to-check-if-a-filesystem-is-mounted-with-a-script).
 *	To monitor a file being changed, use `watch -n 1 stat -c "%y" thefile`.
 *	To create a symbolic link (shortcut), run `ln -s source target`.
@@ -398,7 +400,6 @@ Edit `/etc/ssh/sshrc`, add the following:
 ## Kick out the ssh-ers.
 
 Run `who -u` to see who there are. And kill their tty's by `kill -9 [pid]`. See [this thread](https://unix.stackexchange.com/questions/615/how-do-you-kick-a-benign-user-off-your-system).
-
 
 ## OpenVPN on Ubuntu
 
