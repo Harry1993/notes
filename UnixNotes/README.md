@@ -437,3 +437,8 @@ Run `sudo resolvconf -u` to apply the changes. You may wanna reboot.
 ### nmap
 
 *	`sudo nmap -sS -p 22 192.168.10.0/24` scan the local network for SSH-able hosts.
+
+### Wi-Fi
+
+Run `wpa_passphrase [SSID] [passphrase] > wifi.conf` to save the Wi-Fi config. Run
+`wpa_supplicant -B -i interface -c wifi.conf` to connect.
