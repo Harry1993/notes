@@ -361,6 +361,7 @@ discussion. To unmount, run `fusermount -uz ./mountpoint`. If forget to unmount 
 *	To mimic pbcopy and pbpaste, add these aliases
 *	To find the PID by process name, run `pgrep -lf <process_name>'. Its co-worker `pkill` can kill the processes given the name.
 *	Use `lp -d [printer.name] -o sides=two-sided-long-edge [pdf.path]` to print PDF files.
+*	Use `imagemagick` package to take a screenshot. For example, `import ./shot.png` then select an area. The screenshot will be saved as `./shot.png`. Or to shot the full screen, run `imoprt -window root ./fullshot.png` 
 
 ```
 alias pbcopy='xclip -selection clipboard'
