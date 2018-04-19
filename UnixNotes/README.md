@@ -371,7 +371,8 @@ alias pbpaste='xclip -selection clipboard -o'
 
 *	To find the PID by process name, run `pgrep -lf <process_name>'. Its co-worker `pkill` can kill the processes given the name.
 *	Use `lp -d [printer.name] -o sides=two-sided-long-edge [pdf.path]` to print PDF files.
-*	Use `imagemagick` package to take a screenshot. For example, `import ./shot.png` then select an area. The screenshot will be saved as `./shot.png`. Or to shot the full screen, run `imoprt -window root ./fullshot.png` 
+*	Use `imagemagick` package to take a screenshot. For example, `import ./shot.png` then select an area. The screenshot will be saved as `./shot.png`. Or to shot the full screen, run `imoprt -window root ./fullshot.png`. Or use `scrot`.
+*	See [this](https://wiki.ubuntu.com/ScreenCasts/RecordMyDesktop) to learn how to record screen.
 *	[Best terminal translator](https://github.com/soimort/translate-shell).
 *	To convert EPS to PDF, run `ps2pdf -dEPSCrop input.eps output.pdf`. See [this](http://www.leancrew.com/all-this/2012/03/maintaining-the-boundingbox-in-ps2pdf/).
 *	To convert GBK to UTF-8, run `iconv -f GBK -t UTF-8 input.txt > output.txt`.
