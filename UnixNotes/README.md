@@ -271,7 +271,11 @@ Add it to your `.muttrc`
 
 	source "gpg -d ~/.mutt/passwords.gpg |"
 
-## MacOS
+### "No Authenticators Available" issue on macOS
+
+Add `smtp_authenticators = 'login'` to `muttrc`. `smtp_authenticators = 'gssapi:login'` is slower (may be more secure?).
+
+## macOS
 
 *	To install Zathura, follow [this](https://github.com/zegervdv/homebrew-zathura). Remember to link the plugins into place.
 
@@ -359,15 +363,15 @@ discussion. To unmount, run `fusermount -uz ./mountpoint`. If forget to unmount 
 *	To monitor a file being changed, use `watch -n 1 stat -c "%y" thefile`.
 *	To create a symbolic link (shortcut), run `ln -s source target`.
 *	To mimic pbcopy and pbpaste, add these aliases
-*	To find the PID by process name, run `pgrep -lf <process_name>'. Its co-worker `pkill` can kill the processes given the name.
-*	Use `lp -d [printer.name] -o sides=two-sided-long-edge [pdf.path]` to print PDF files.
-*	Use `imagemagick` package to take a screenshot. For example, `import ./shot.png` then select an area. The screenshot will be saved as `./shot.png`. Or to shot the full screen, run `imoprt -window root ./fullshot.png` 
 
 ```
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 ```
 
+*	To find the PID by process name, run `pgrep -lf <process_name>'. Its co-worker `pkill` can kill the processes given the name.
+*	Use `lp -d [printer.name] -o sides=two-sided-long-edge [pdf.path]` to print PDF files.
+*	Use `imagemagick` package to take a screenshot. For example, `import ./shot.png` then select an area. The screenshot will be saved as `./shot.png`. Or to shot the full screen, run `imoprt -window root ./fullshot.png` 
 *	[Best terminal translator](https://github.com/soimort/translate-shell).
 *	To convert EPS to PDF, run `ps2pdf -dEPSCrop input.eps output.pdf`. See [this](http://www.leancrew.com/all-this/2012/03/maintaining-the-boundingbox-in-ps2pdf/).
 *	To convert GBK to UTF-8, run `iconv -f GBK -t UTF-8 input.txt > output.txt`.
