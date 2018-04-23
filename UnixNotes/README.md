@@ -314,6 +314,19 @@ Use xmodmap. See [this](http://www.cnblogs.com/lzhskywalker/archive/2012/07/20/2
 
 ### Sound card on Ubuntu
 
+#### Reset default sound card
+
+Run `pacmd list-cards` to display the index of your cards. Then `pacmd set-card-profile 2 output:analog-stereo` to set index 2 as the default output. To make it permament, edit `/etc/pulse/default.pa` and add:
+
+```
+set-card-profile 2  output:analog-stereo
+set-default-sink 2
+```
+
+Restart pulseaudio: `pulseaudio -k` and `pulseaudio -D`. See [this](https://askubuntu.com/questions/398030/change-default-sound-device) and [this](https://askubuntu.com/questions/15223/how-can-i-restart-pulseaudio-without-logout).
+
+#### Volume issue
+
 If USB sound card is too loud or mutes at low volume, edit
 `/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common`, add line
 `volume-limit = 0.005` under `[Element PCM]`. If volume is too low, increase
@@ -323,6 +336,8 @@ the number. Run `pulseaudio -k` to make it into effect. See
 Or try `alsamixer`. :)
 
 Rathan than `pacmd`, use `pactl`. See [this](https://unix.stackexchange.com/questions/65246/change-pulseaudio-input-output-from-shell) for their differences.
+
+#### For other distributions
 
 If use another sound card, use `aplay -l` to get the device number, then change
 `~/.asoundrc` to
