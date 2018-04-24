@@ -400,6 +400,7 @@ rename -n 's/.*(S01E.*)\ (.*)\ 720p.*/better.call.saul.$1.$2.srt/' ./*
 ```
 
 to rehearse it. Remove `-n` to actually do it.
+*	To replace stupid spaces in filenames, run `find -name "* *" -type f | rename 's/ /_/g'`. See [this](https://stackoverflow.com/questions/2709458/how-to-replace-spaces-in-file-names-using-a-bash-script).
 *	To Convert `.dff` to `.flac`, use `dfs2flac`. See [this](https://github.com/hank/dsf2flac). Use bash for loop parallely:
 
 ```
