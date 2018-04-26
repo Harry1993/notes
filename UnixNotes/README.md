@@ -291,8 +291,9 @@ run `startx`.
 
 ### To startup with command line
 
-edit `/etc/default/grub`, change `GRUB_CMDLINE_LINUX_DEFAULT=”quiet
-splash”`, to `GRUB_CMDLINE_LINUX_DEFAULT=”text”`. Finally `update-grub`.
+edit `/etc/default/grub`, change `GRUB_CMDLINE_LINUX_DEFAULT=”quiet splash”`,
+to `GRUB_CMDLINE_LINUX_DEFAULT=”text”`. Also, add `GRUB_TERMINAL=console`.
+Finally `update-grub` and `systemctl set-default multi-user.target`.
 
 ### Gnome xauthority issues
 
