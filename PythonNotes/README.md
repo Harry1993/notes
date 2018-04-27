@@ -2,10 +2,6 @@
 
 How to write Pythonic codes.
 
-## Module
-
-*	`if __name__ == '__main__'` means this module is called as main.
-
 ## List
 
 ### List Comprehensions
@@ -63,7 +59,7 @@ for a, b in zip(alist, blist):
 ```
 
 An elegant way (from
-[here](http://locallyoptimal.com/blog/2013/01/20/elegant-n-gram-generation-in-python/)
+[here](http://locallyoptimal.com/blog/2013/01/20/elegant-n-gram-generation-in-python/))
 to generate n-gram using `zip` is
 
 ```
@@ -73,4 +69,12 @@ def find_ngrams(input_list, n):
   return zip(*[input_list[i:] for i in range(n)])
 ```
 
+## pip
+
+### `ImportError: No module named pip` error
+
+Run `rm /usr/local/bin/pip*` and then `apt-get install python-pip`.
+
 ## Misc
+
+*	`if __name__ == '__main__'` means this module is called as main.
