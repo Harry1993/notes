@@ -363,7 +363,7 @@ If use another sound card, use `aplay -l` to get the device number, then change
 *	Before use xfig, run `source /sw/bin/init.sh`.
 *	VPN over SSH: `sshuttle -r username@sshserver 0/0`.
 *	Use `nload` to monitor network.
-*	Burn ISO file to a flash drive or disk, use `dd`. See [this](http://osxdaily.com/2012/03/13/burn-an-iso-image-from-the-command-line/). Or Etcher on Mac recommanded by Ubuntu.
+*	Burn ISO file to a flash drive or disk, use `dd`. See [this](https://askubuntu.com/questions/372607/how-to-create-a-bootable-ubuntu-usb-flash-drive-from-terminal). Or Etcher on Mac recommanded by Ubuntu.
 *	Before `git push`, run `git add .` and then `git commit -m "blahblah"`.
 *	Use `sshfs` to mount a sftp drive. E.g., `sshfs -o allow_other -o ro
 	username@hostname:/remote/directory/path /local/mount/point`, where `-o
