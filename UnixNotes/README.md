@@ -313,6 +313,21 @@ Use compizconfig-settings-manager. See [this](http://www.linuxdiyf.com/linux/227
 
 Use xmodmap. See [this](http://www.cnblogs.com/lzhskywalker/archive/2012/07/20/2600854.html).
 
+### Reverse mouse scrolling direction
+
+Edit `/usr/share/X11/xorg.conf.d/40-libinput.conf`; add `Option "NaturalScrolling" "on"` within the `pointer` Section. I.e., we should have this:
+
+```
+Section "InputClass"
+        Identifier "libinput pointer catchall"
+        MatchIsPointer "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+        # Yanmao's setting
+        Option "NaturalScrolling" "on"
+EndSection
+```
+
 ### Sound card on Ubuntu
 
 #### Reset default sound card
