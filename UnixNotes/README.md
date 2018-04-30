@@ -330,6 +330,10 @@ EndSection
 
 ### Sound card on Ubuntu
 
+### Printing jobs
+
+Run `lpstat -p` to see the available printers. Run `lpoptions -d [printer]` to set the default printer. Run `lp -d [printer.name] -o sides=two-sided-long-edge [pdf.path]` to print a file. 
+
 #### Reset default sound card
 
 Run `pacmd list-cards` to display the index of your cards. Then `pacmd set-card-profile 2 output:analog-stereo` to set index 2 as the default output. To make it permament, edit `/etc/pulse/default.pa` and add:
@@ -401,7 +405,6 @@ alias pbpaste='xclip -selection clipboard -o'
 ```
 
 *	To find the PID by process name, run `pgrep -lf <process_name>'. Its co-worker `pkill` can kill the processes given the name.
-*	Use `lp -d [printer.name] -o sides=two-sided-long-edge [pdf.path]` to print PDF files.
 *	Use `imagemagick` package to take a screenshot. For example, `import ./shot.png` then select an area. The screenshot will be saved as `./shot.png`. Or to shot the full screen, run `imoprt -window root ./fullshot.png`. Or use `scrot`.
 *	See [this](https://wiki.ubuntu.com/ScreenCasts/RecordMyDesktop) to learn how to record screen.
 *	[Best terminal translator](https://github.com/soimort/translate-shell).
