@@ -13,14 +13,9 @@ If you don't want to type `-cp` every time, yo can copy `.jar` file to `/Library
 
 Some of the forms of redirection for the C shell family are:
 
-*	`\>`		Redirect standard output
-*	`\>\&`		Redirect standard output and standard error
-*	`\<`		Redirect standard input
-*	`\>\!`		Redirect standard output; overwrite file if it exists
-*	`\>\&\!`	Redirect standard output and standard error; overwrite file if it exists
-*	`\|`		Redirect standard output to another command (pipe)
-*	`\>\>`		Append standard output
-*	`\>\>\&`	Append standard output and standard error
+*	`>`		Redirect standard output
+*	`&>`		Redirect standard output and standard error
+*	`&>>`		Append standard output and standard error
 
 Examples:
 
