@@ -1,7 +1,6 @@
 # Unix Notes
 
-This is a document by Yanmao Man, who is learning how to migrate everything
-to shell from GUI on his MacBook. Actually he is just being cool.
+There should be a content table...
 
 ## _XQuery_ command line
 
