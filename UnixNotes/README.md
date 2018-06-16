@@ -4,7 +4,9 @@ There should be a content table...
 
 ## _XQuery_ command line
 
-	java -cp saxon9he.jar net.sf.saxon.Query -t -s:samples\data\books.xml -q:samples\query\books-to-html.xq -o:c:\temp.html
+```
+java -cp saxon9he.jar net.sf.saxon.Query -t -s:samples\data\books.xml -q:samples\query\books-to-html.xq -o:c:\temp.html
+```
 
 If you don't want to type `-cp` every time, yo can copy `.jar` file to `/Library/Java/Extensions` on macOS.
 
@@ -18,9 +20,11 @@ Some of the forms of redirection for the C shell family are:
 
 Examples:
 
-	% who > names
-	% (pwd; ls -l) > out
-	% java DTDGenerator > hw5.dtd
+```
+who > names
+(pwd; ls -l) > out
+java DTDGenerator > hw5.dtd
+```
 
 ## Background jobs
 
@@ -421,6 +425,7 @@ for filename in ./*;
 	do dsf2flac -i $filename &;
 done
 ```
+*	Wake up with password. See [this](https://www.reddit.com/r/i3wm/comments/4uws3f/require_password_on_wake_from_sleep/).
 
 ## Useless but cool
 
