@@ -270,6 +270,8 @@ Add it to your `.muttrc`
 
 	source "gpg -d ~/.mutt/passwords.gpg |"
 
+For more information about `gpg` or `pgp`, here is [a good tutorial](https://futureboy.us/pgp.html).
+
 ### "No Authenticators Available" issue on macOS
 
 Add `smtp_authenticators = 'login'` to `muttrc`. `smtp_authenticators = 'gssapi:login'` is slower (may be more secure?).
