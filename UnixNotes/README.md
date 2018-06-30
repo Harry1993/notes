@@ -356,7 +356,9 @@ the number. Run `pulseaudio -k` to make it into effect. See
 
 Or try `alsamixer`. :)
 
-Rathan than `pacmd`, use `pactl`. See [this](https://unix.stackexchange.com/questions/65246/change-pulseaudio-input-output-from-shell) for their differences.
+Rathan than `pacmd`, use `pactl`. See
+[this](https://unix.stackexchange.com/questions/65246/change-pulseaudio-input-output-from-shell)
+for their differences.
 
 #### For other distributions
 
@@ -372,6 +374,10 @@ If use another sound card, use `aplay -l` to get the device number, then change
         type hw
         card 1
 	}
+
+Or block the whole shitty built-in device. To do so, add `blacklist
+snd_hda_intel` to `/etc/modprobe.d/blacklist.conf`. Thanks to [this
+answer](https://superuser.com/a/1013451).
 
 ## MISC
 
