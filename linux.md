@@ -175,6 +175,12 @@ According to [this](https://github.com/robbyrussell/oh-my-zsh/issues/1720), we s
 *	To preview PDF instantly when editing `.tex`, use [vim-latex-live-preview](https://github.com/xuhdev/vim-latex-live-preview)
 *	`python` issue? Try `apt install vim-python-jedi`.
 
+### YouCompleteMe
+
+Add `Plugin 'Valloric/YouCompleteMe'` to `~/.vimrc`. Run `vim +PluginInstall
++qall`. Run `~/.vim/bundle/Youcompleteme/install.py`. Done! Other vim plugins
+can be installed in similar ways.
+
 ### Map hotkeys to do what you want
 
 First, define a function to do something. Take C programming and Latexing for
@@ -389,7 +395,10 @@ answer](https://superuser.com/a/1013451).
 *	Before use xfig, run `source /sw/bin/init.sh`.
 *	VPN over SSH: `sshuttle -r username@sshserver 0/0`.
 *	Use `nload` to monitor network.
-*	Burn ISO file to a flash drive or disk, use `dd`. See [this](https://askubuntu.com/questions/372607/how-to-create-a-bootable-ubuntu-usb-flash-drive-from-terminal). Or Etcher on Mac recommanded by Ubuntu.
+*	Burn ISO file to a flash drive or disk, use `dd`. See
+	[this](https://askubuntu.com/questions/372607/how-to-create-a-bootable-ubuntu-usb-flash-drive-from-terminal).
+Or Etcher on Mac recommanded by Ubuntu. To burn a stupid Windows ISO, use
+[`WoeUSB`](https://github.com/slacka/WoeUSB).
 *	Before `git push`, run `git add .` and then `git commit -m "blahblah"`.
 *	Use `sshfs` to mount a sftp drive. E.g., `sshfs -o allow_other -o ro
 	username@hostname:/remote/directory/path /local/mount/point`, where `-o
