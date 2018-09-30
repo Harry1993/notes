@@ -414,6 +414,8 @@ discussion. To unmount, run `fusermount -uz ./mountpoint`. If forget to unmount 
 *	To monitor a file being changed, use `watch -n 1 stat -c "%y" thefile`.
 *	To create a symbolic link (shortcut), run `ln -s source target`.
 *	To mimic pbcopy and pbpaste, add these aliases
+*	To view hardware information, run `lspci` then `lspci -v -s 01:00.0`.
+*	To split `.wav`, `.flac` or `.ape`, use `shntool`. See [this ArchWiki](https://wiki.archlinux.org/index.php/CUE_Splitting).
 
 ```
 alias pbcopy='xclip -selection clipboard'
