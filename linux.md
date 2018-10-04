@@ -102,7 +102,7 @@ or `$tau_c` in current line, we can run
 	:$s/\(\\[a-z]|_]*\)/$\1$/gc
 
 where `\1` is called _backreference_. It represents the first pattern that
-surround by `()`. `\2` represents the second one.
+is surrounded by `()`. `\2` represents the second one, etc.
 
 However, for normal regex, backslash before parenthesis should be omitted.
 For more information, refer to [here](http://tex.stackexchange.com/questions/116036/automatically-replace-all-foo-with-absfoo).
