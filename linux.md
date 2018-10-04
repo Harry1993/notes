@@ -97,12 +97,12 @@ Put `.sty` into `/usr/local/texlive/2010basic/texmf-dist/tex/latex/base/`, then 
 ### backreference
 
 In vim, if we want to replace, for example,  all `\tar` or `\tau_c` into `$tau$`
-or `$tau_c` in current line, we can run
+or `$tau_c$` in current line, we can run
 
 	:$s/\(\\[a-z]|_]*\)/$\1$/gc
 
-where `\1` is called _backreference_. It represents the first pattern that
-is surrounded by `()`. `\2` represents the second one, etc.
+where `\1` is called _backreference_. It represents the pattern that is
+surrounded by the first pair of `()`. `\2` represents the second pair, etc.
 
 However, for normal regex, backslash before parenthesis should be omitted.
 For more information, refer to [here](http://tex.stackexchange.com/questions/116036/automatically-replace-all-foo-with-absfoo).
