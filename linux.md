@@ -507,3 +507,15 @@ Run `wpa_passphrase [SSID] [passphrase] > wifi.conf` to save the Wi-Fi config. R
 
 Who's listening to a given port? `netstat -tulpn | grep :80`. See
 [this](https://www.cyberciti.biz/faq/what-process-has-open-linux-port/).
+
+## Docker Container
+
+Fail to launch docker daemon? Try
+[these](https://github.com/docker/for-linux/issues/123):
+
+```
+ip link add name docker0 type bridge
+ip addr add dev docker0 172.17.0.1/16
+```
+
+
