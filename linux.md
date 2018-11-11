@@ -502,3 +502,8 @@ Run `sudo resolvconf -u` to apply the changes. You may wanna reboot.
 
 Run `wpa_passphrase [SSID] [passphrase] > wifi.conf` to save the Wi-Fi config. Run
 `wpa_supplicant -B -i interface -c wifi.conf` to connect.
+
+### netstat
+
+Who's listening to a given port? `netstat -tulpn | grep :80`. See
+[this](https://www.cyberciti.biz/faq/what-process-has-open-linux-port/).
