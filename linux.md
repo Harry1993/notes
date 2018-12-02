@@ -234,6 +234,18 @@ The new way should be `bind-key -T copy-mode-vi v send-keys -X begin-selection`.
 
 See [this](http://stahlke.org/dan/tmux-nested/).
 
+### share a session with multiple users without using `tmate` or `wemux`
+
+```
+# start a new session
+tmux -S /tmp/socket
+# change the permission
+chmod 777 /tmp/socket
+
+# from other users
+tmux -S /tmp/socket attach
+```
+
 ## Latex
 
 *	To make page size fit to the content, use `\documentclass{standalone}`.
