@@ -297,6 +297,7 @@ Add `smtp_authenticators = 'login'` to `muttrc`. `smtp_authenticators = 'gssapi:
 ## macOS
 
 *	To install Zathura, follow [this](https://github.com/zegervdv/homebrew-zathura). Remember to link the plugins into place.
+*	To disable low disk space alerts, see[this](https://apple.stackexchange.com/questions/254485/silencing-your-disk-is-almost-full-notification).
 
 ## Ubuntu
 
