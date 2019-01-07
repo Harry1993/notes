@@ -25,17 +25,40 @@ More complicated,
 ```
 combs = []
 for x in [1,2,3]:
-    for y in [3,1,4]:
+    for y in [3,4]:
         if x != y:
             combs.append((x, y))
 
 combs
 ```
 
-is equivalent to
+can be one-lined to
 
 ```
-[(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+[(x, y) for x in [1,2,3] for y in [3,4] if x != y]
+```
+
+We can also use `itertools`:
+
+```
+[(x, y) for x, y in itertools.product(*[[1,2,3], [3,4]])]
+```
+
+where `(*[A, B])` results in `(A, B)`.
+
+Sometimes we may want to use `numpy.npindex`:
+
+```
+[(x, y) for x, y in numpy.npindex((3, 4))]
+```
+
+which is the same to
+
+```
+out = []
+for x in range(3):
+	for y in range(4):
+		out.append((x, y))
 ```
 
 ## Matplotlib
