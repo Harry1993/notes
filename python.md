@@ -101,3 +101,11 @@ Run `rm /usr/local/bin/pip*` and then `apt-get install python-pip`.
 ## Misc
 
 *	`if __name__ == '__main__'` means this module is called as main.
+
+## Multiple versions coexisting
+
+Use `pyenv` and `pipenv`. For example,
+
+*	Install an alternative Python: `pyenv install 3.5.5`.
+*	Create an virtual envirnment at the workspace: `pipenv --python 3.5`. `pipenv` will work with `pyenv` to find when the required Python executable is.
+*	Go check it: `pipenv shell` and `python3 -V`.
