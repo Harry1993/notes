@@ -107,5 +107,7 @@ Run `rm /usr/local/bin/pip*` and then `apt-get install python-pip`.
 Use `pyenv` and `pipenv`. For example,
 
 *	Install an alternative Python: `pyenv install 3.5.5`.
-*	Create an virtual envirnment at the workspace: `pipenv --python 3.5`. `pipenv` will work with `pyenv` to find when the required Python executable is.
-*	Go check it: `pipenv shell` and `python3 -V`.
+*	Create a virtual envirnment at the workspace: `pipenv --python 3.5`.
+	`pipenv` will work with `pyenv` to find where the required Python
+	executable is.
+*	Verify it: `pipenv shell` and `python3 -V`.
