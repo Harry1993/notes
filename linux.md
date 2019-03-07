@@ -461,6 +461,7 @@ done
 ```
 *	Wake up with password. See [this](https://www.reddit.com/r/i3wm/comments/4uws3f/require_password_on_wake_from_sleep/).
 *	Use `alien` to convert `.rpm` to `.deb`. See [this](https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-rpm-packages-on-ubuntu-11-10.html).
+*	To shrink the size of an image: `convert -strip -interlace Plane -gaussian-blur 0.05 -quality 20% in.jpg out.jpg`.
 
 ## Useless but cool
 
