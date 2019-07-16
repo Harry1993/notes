@@ -60,6 +60,8 @@ Find and cp: `find ./ -mmin -60 -name '*.eps' -exec cp {} ~/Dropbox/Research/PeB
 
 `tar -xvz -f file.tar.gz` to decompress a tar.gz file.
 
+`tar xf filename` to unzip any `tar.*` files.
+
 ### 7z
 
 To extract, run `7za x filename.7z`. Some files have name of `filename.tar.7z`. That means we should first extract with `7za` and then `tar`.
