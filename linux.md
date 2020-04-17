@@ -341,12 +341,12 @@ Edit `/usr/share/X11/xorg.conf.d/40-libinput.conf`; add `Option "NaturalScrollin
 
 ```
 Section "InputClass"
-        Identifier "libinput pointer catchall"
+        Identifier "Logitech MX Anywhere 2S" # use xinput list for this
         MatchIsPointer "on"
-        MatchDevicePath "/dev/input/event*"
+        MatchDevicePath "/dev/input/event10" # use xinput list for this
         Driver "libinput"
-        # Yanmao's setting
-        Option "NaturalScrolling" "on"
+        Option "NaturalScrolling" "on"       # macOS default
+		Option "Accel Speed" ".4"            # curser speed
 EndSection
 ```
 
