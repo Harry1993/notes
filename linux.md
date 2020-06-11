@@ -346,7 +346,7 @@ Section "InputClass"
         MatchDevicePath "/dev/input/event10" # use xinput list for this
         Driver "libinput"
         Option "NaturalScrolling" "on"       # macOS default
-		Option "Accel Speed" ".4"            # curser speed
+        Option "Accel Speed" ".4"            # curser speed
 EndSection
 ```
 
@@ -465,10 +465,16 @@ done
 *	Use `alien` to convert `.rpm` to `.deb`. See [this](https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/install-rpm-packages-on-ubuntu-11-10.html).
 *	To shrink the size of an image: `convert -strip -interlace Plane -gaussian-blur 0.05 -quality 20% in.jpg out.jpg`.
 
+## Useful tools
+
+*	Use `grip README.md` to render Markdown.
+
 ## Useless but cool
 
 *	Use `fbi` to view image in real terminal.
 *	Use `fbgs` to view PDF in real terminal.
+*	Try `cacafire`.
+*	Try `lolcat` rather than `cat`.
 
 ## Email me when someone ssh in.
 Edit `/etc/ssh/sshrc`, add the following:
