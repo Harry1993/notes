@@ -106,7 +106,8 @@ Run `rm /usr/local/bin/pip*` and then `apt-get install python-pip`.
 
 Use `pyenv` and `pipenv`. For example,
 
-*	Install an alternative Python: `pyenv install 3.5.5`.
+*	Install an alternative Python: `env PYTHON_CONFIGURE_OPTS="--enable-shared"
+	pyenv install 3.5.5`.
 *	Create a virtual envirnment at the workspace: `pipenv --python 3.5`.
 	`pipenv` will work with `pyenv` to find where the required Python
 	executable is.
