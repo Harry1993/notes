@@ -1,6 +1,6 @@
-# How to setup TensorFlow with CUDA in WSL2
+# Install TensorFlow with CUDA support in WSL2
 
-Follow https://www.tensorflow.org/install/pip the most part.
+Follow https://www.tensorflow.org/install/pip for the most part.
 
 But then you may run into [two
 problems](https://stackoverflow.com/questions/76016645/tensorflow-2-12-could-not-load-library-libcudnn-cnn-infer-so-8-in-wsl2)
