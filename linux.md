@@ -80,6 +80,8 @@ To extract, run `7za x filename.7z`. Some files have name of `filename.tar.7z`. 
 
 `grep --include=\*.{c,h} --exclude=*.o --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/somewhere/' -e "pattern"` searches pattern in all files under given dir.
 
+`grep -lZ "first string" * | xargs -0 grep -l "second string"` [grep from the files from a previous grep](https://superuser.com/questions/792319/how-can-i-perform-a-second-grep-on-the-files-returned-from-a-previous-grep).
+
 ## Tex
 
 Put `.sty` into `/usr/local/texlive/2010basic/texmf-dist/tex/latex/base/`, then run `texhash`.
